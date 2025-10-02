@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<!--Links
+https://coolors.co/palette/bee9e8-62b6cb-1b4965-cae9ff-5fa8d3 (pallete)
+
+-->
+
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="header">
+    <h1 id="centerer">
+      <img id="logoBig" src="logo.png" />
+      <img id="logoBig" src="logo-text.png" />
+    </h1>
+
+    <p>3D Printing Products</p>
+  </div>
+
+  <div id="Products">
+    <h1>Products:</h1>
+    <h3>See what we have in shop!</h3>
+  </div>
+  <div class="flex-container"></div>
+
+  <div style="padding: 10px; background-color:#f1f1f1;">
+    <div class=".dontuse" id="infoProd">
+      <h1>Proudct Finder</h1>
+      <h5 style="font-weight: lighter;">What product would you like to find?</h5>
+      <h3 id="descName">Here is the Proudct Name!</h3>
+      <p id="description">Here is the text you would see for your product, just click one and it should appear there!
+      </p>
+      <img id="productNoneLogo" src="productNoneLogo.png">
+    </div>
+  </div>
+
+  <div id="order_formated">
+    <div id="order">
+      <h1 id="orderTitle">Ordering Proudcts:</h1>
+      <h4 id="orderSubtitle">Please order products here:</h4>
+      <h5 id="question">What product would you like?</h5>
+
+      <form id="FormProd">
+        <input type="radio" id="Item1" name="fav_language" value="Cube Fidget" />
+        <label for="Items">Cube Fidget</label><br />
+
+        <input type="radio" id="Item2" name="fav_language" value="Quantum Skull" />
+        <label for="Items">Quantum Skull</label><br />
+
+        <input type="radio" id="Item3" name="fav_language" value="Impossible Passthrough" />
+        <label for="Items">Impossible Passthrough</label><br />
+
+        <input type="radio" id="Item4" name="fav_language" value="Headphone Stand" />
+        <label for="Items">Headphone Stand</label><br />
+
+        <input type="radio" id="Item5" name="fav_language" value="Other" />
+        <label for="Items">Other</label>
+      </form>
+      <h5 id="question">What is your name?</h5>
+      <input id="nameForm" name="fav_language" value=" " placeholder="Name" />
+      <button onclick="formOrder()" id="submitOrder">Order!</button>
+    </div>
+  </div>
+  </div>
+  <div id="footer">
+    <h4>Created by Scrit </h4>
+    <h5 style="  font-weight: normal;
+">Privicy policy or somthing</h5>
+
+  </div>
+</body>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: auto 0;
+    background-color: #cae9ff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+  }
+
+  #header {
+    padding: 40px;
+    text-align: center;
+    background-color: #cae9ff;
+  }
+
+  #Products {
+    text-align: center;
+    padding: 100px;
+    background-image: url("ProductBanner.svg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    animation: scroll-background 10s linear infinite;
+  }
+
+  #order_formated {
+    padding: 20px;
+  }
+
+  #logoBig {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #footer {
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    font-weight: normal;
+  }
+
+  #infoProd {
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border: 4px solid #1b4965;
+    box-shadow: 4px 4px #1b4965;
+    width: 85%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #FormProd {
+    text-align: left;
+    padding-left: 20px;
+    display: block;
+    height: 7.5vh;
+  }
+
+  #productNoneLogo {
+    height: 180px;
+    border: 4px solid #1b4965;
+    box-shadow: 4px 4px #1b4965;
+
+
+  }
+
+
+  #nameForm {
+    position: relative;
+    left: 20px;
+    text-align: center;
+    width: 100px;
+  }
+
+  #order {
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border: 4px solid #1b4965;
+    box-shadow: 4px 4px #1b4965;
+  }
+
+  #submitOrder {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 4px solid #1b4965;
+    box-shadow: 4px 4px #1b4965;
+    position: relative;
+    top: 20px;
+  }
+
+  #submitOrder:hover {
+    box-shadow: 6px 6px #1b4965;
+  }
+
+  #orderTitle {
+    text-align: center;
+    padding: 20px;
+    font-weight: 2px;
+  }
+
+  #orderSubtitle {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: normal;
+  }
+
+  #question {
+    padding-left: 20px;
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
+    top: 2.5vh;
+  }
+
+  .flex-container {
+    display: flex;
+    background-color: #5fa8d3;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .flex-container>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border: 4px solid #1b4965;
+
+    box-shadow: 4px 4px #1b4965;
+  }
+
+  .flex-container>div :hover {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border: 4px solid #1b4965;
+  }
+
+  .container {
+    padding: 50px;
+  }
+
+  /* more pain */
+
+  * {
+    opacity: 0;
+    transform: translateY(10px);
+    transform: scale(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #prodImg {
+    width: 100px;
+    height: 100px;
+    box-shadow: 4px 4px #1b4965;
+    border-radius: 4px;
+    padding: 15px;
+  }
+
+  @keyframes scroll-background {
+    from {
+      background-position-x: 0%;
+    }
+
+    to {
+      background-position-x: 100%;
+    }
+  }
+</style>
+<script>
+  //pain lmaoooo
+  // Function to check and show elements
+  function showVisibleElements() {
+    const elements = document.querySelectorAll("*:not(.dontuse)");
+    const windowHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight) {
+        element.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", showVisibleElements);
+
+  window.addEventListener("load", showVisibleElements);
+  //create a new product
+  //desc = description
+  function createProduct(name, imageSrc, desc) {
+    const flexContainer = document.querySelector(".flex-container");
+
+    const itemDiv = document.createElement("div");
+    itemDiv.style.display = "flex";
+    itemDiv.style.flexDirection = "column";
+    itemDiv.style.alignItems = "center";
+    itemDiv.style.margin = "10px";
+
+    // create text 
+    const textNode = document.createTextNode(name);
+    itemDiv.appendChild(textNode);
+
+    // create the image
+    const img = document.createElement("img");
+    img.id = "prodImg";
+    img.src = imageSrc;
+    img.width = 150;
+    img.onclick = seeDetail;
+    itemDiv.appendChild(img);
+
+    flexContainer.appendChild(itemDiv);
+    //DESCRIPTION FOR CLICK
+    function seeDetail() {
+      document.getElementById("descName").innerHTML = name
+
+      document.getElementById("description").innerHTML = desc
+
+      document.getElementById("productNoneLogo").src = imageSrc
+
+    }
+    //ADD FUCKING MEMEBERDHIPS
+  }
+  let whatProduct
+  function formOrder() {
+    const radioButtons = document.forms['FormProd'].elements['fav_language'];
+    let productSelected = false;
+    let whatProduct = '';
+    let nameProduct = '';
+
+    for (let i = 0; i < radioButtons.length; i++) {
+      if (radioButtons[i].checked) {
+        whatProduct = radioButtons[i].value;
+        productSelected = true;
+        break;
+      }
+    }
+
+    if (!productSelected) {
+      alert('No product selected!');
+      return; // Exit the function if no product is selected
+    }
+
+    // Name check
+    const nameInput = document.getElementById('nameForm').value.trim(); // Trim whitespace
+    if (nameInput === "") {
+      alert("No name!");
+      return; //exit if no option found lol (never goona happen ;)
+    } else {
+      nameProduct = nameInput;
+    }
+
+    const whatProductProc = whatProduct.replaceAll(' ', '+');
+    const nameProductProc = nameProduct.replaceAll(' ', '+');
+
+    const url = "https://docs.google.com/forms/d/e/1FAIpQLSc6EkpEoU2Wua2v3UO4EMEdnr-34j37ZXbua7K6vIyM9IW7NA/viewform?usp=pp_url&entry.756591722=" + whatProductProc + "&entry.433925862=" + nameProductProc
+    window.open(url);
+  }
+
+</script>
+<script src="Productnfo.js"></script>
+</html>
