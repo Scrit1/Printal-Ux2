@@ -9,11 +9,6 @@
     "Impossible passthrough: A mindbending satisfaction to show off to people! "
   );
   createProduct(
-    "Quantum Skull",
-    "Quantum Skull.webp",
-    "Quantum Skull: An advanced and elaborate skull that is amazing and extremely cool!"
-  );
-  createProduct(
     "Headphone stand",
     "Headphone Stand.webp",
     "Headphone stand: Need a place to store your headphones? This 3D print has got YOU covered!"
